@@ -16,8 +16,7 @@ const PostGridStyles = styled.div`
 
 export default function WorksPage ({data, pageContext}) {
   const works = data.works.nodes
-  console.log(works);
-  console.log(pageContext);
+
   return (
     <><SEO
       title={`Works - Page ${pageContext.currentPage || 1}`}

@@ -51,7 +51,6 @@ export function Profile({data}) {
       }
   }
   `)
-  console.log(data);
   const {opening, shortDescription, typingStrings} = data
 
   function parsedArray(array) {

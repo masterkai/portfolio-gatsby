@@ -33,7 +33,6 @@ const StackBox = styled.div`
 `
 
 export default function SingleWorkPage({data:{work}}) {
-  console.log(work.mainImage.asset.url);
   return (
     <><SEO title={work.name} image={work.mainImage.asset.url}/>
       <Box sx={{py: 4}}>

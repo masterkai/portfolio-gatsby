@@ -30,7 +30,6 @@ const MainCover = styled.div`
 
 export default function SinglePostPage({data:{post}}) {
   const {mode} = React.useContext(ColorModeContext)
-  console.log(mode);
   return (
     <>
       <SEO title={post.title} image={post?.mainImage?.asset?.url}/>

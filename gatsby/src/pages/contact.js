@@ -22,7 +22,6 @@ export default function ContactPage() {
     values
   })
 
-  console.log('values', values);
   const isValidEmail = validateEmail(values.email);
   if (message) {
     return <p>{message}</p>

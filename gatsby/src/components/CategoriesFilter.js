@@ -64,10 +64,7 @@ export function CategoriesFilter({activeCategory, pathname}) {
   // link it up .....
   console.clear()
   const categoriesWithCounts = countPostsInCategories(posts.nodes)
-  console.log(categoriesWithCounts);
   const match = new RegExp('blog')
-  // console.log(match.test(pathname));
-  // console.log(pathname);
   return (
     <CategoryStyle>
       <Typography variant={'body1'} children={'Search blog by topics'}/>

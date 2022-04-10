@@ -46,7 +46,7 @@ function a11yProps(index) {
 
 export default function VerticalTabs({data}) {
   const matches = useMediaQuery('(min-width:600px)');
-  // console.log('matches', matches);
+
   const {educationData, experienceData, skillData, worksData, interestsData,} = data;
   const [value, setValue] = React.useState(0);
 

@@ -8,7 +8,6 @@ export default function useContact({values}) {
   // this is the function that is run when someone submits the form
   async function submitOrder(e) {
     e.preventDefault();
-    console.log(e);
     setLoading(true);
     setError(null);
     // setMessage('do something');
@@ -20,7 +19,6 @@ export default function useContact({values}) {
       message: values.message,
       mapleSyrup: values.mapleSyrup,
     };
-    console.log(body);
     // 4. Send this data to the serevrless function when they check out
     const res = await fetch(
       `${process.env.GATSBY_SERVERLESS_BASE}/contact`,

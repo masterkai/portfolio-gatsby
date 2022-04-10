@@ -17,7 +17,6 @@ export default function Layout({children}) {
     () => ({
       // The dark mode switch would invoke this method
       toggleColorMode: () => {
-        console.log('toggleColorMode rendered!!');
         setMode((prevMode) => {
             return prevMode === 'light' ? 'dark' : 'light'
           }
@@ -30,7 +29,6 @@ export default function Layout({children}) {
 
   // Update the theme only if the mode changes
   const theme = React.useMemo(() => createTheme(getDesignTokens(mode)), [mode]);
-  // console.log('theme', theme.palette.primary.main);
   return (
     <>
       <GlobalStyles mode={mode} mainColor={theme.palette.primary.main}/>

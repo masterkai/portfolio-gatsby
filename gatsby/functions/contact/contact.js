@@ -34,11 +34,9 @@ exports.handler = async (event, context) => {
       body: JSON.stringify({ message: 'Boop beep bop zzzzstt good bye' }),
     };
   }
-  console.log(body);
   const requiredFields = ['email', 'name', 'message']
 
   for (let field of requiredFields) {
-    console.log(`checking field ${field} is correct`);
     if (!body[field]) {
       return {
         statusCode: 400,
