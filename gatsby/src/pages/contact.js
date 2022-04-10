@@ -27,7 +27,8 @@ export default function ContactPage() {
     return <p>{message}</p>
   }
   return (
-    <><SEO title={`Contact me Page`}/>
+    <>
+      <SEO title={`Contact me Page`} />
       <div style={{paddingTop: '2rem'}}>
         <Link to="/">Go to the main page</Link>
         <Title title={'PINE ME!'}/>

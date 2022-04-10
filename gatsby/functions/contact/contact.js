@@ -1,9 +1,10 @@
 const nodemailer = require('nodemailer');
 
-function generateContactEmail({name, email}) {
+function generateContactEmail({name, email, message}) {
   return `<div>
-    <h2>Hi ${name},</h2>
-    <p>your email is ${email}, and we have received your message, so we will respond to you as soon as possible.</p>
+    <h2>client's name: ${name},</h2>
+    <p>client's email: ${email}.</p>
+    <p>client's message: ${message}</p>
 </div>`
 }
 
@@ -17,11 +18,11 @@ const transporter = nodemailer.createTransport({
   }
 });
 
-function wait(ms = 0) {
-  return new Promise((resolve, reject) => {
-    setTimeout(resolve, ms)
-  })
-}
+// function wait(ms = 0) {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(resolve, ms)
+//   })
+// }
 
 exports.handler = async (event, context) => {
   // validate the data coming in is correct
@@ -31,7 +32,7 @@ exports.handler = async (event, context) => {
   if (body.mapleSyrup) {
     return {
       statusCode: 400,
-      body: JSON.stringify({ message: 'Boop beep bop zzzzstt good bye' }),
+      body: JSON.stringify({message: 'Boop beep bop zzzzstt good bye'}),
     };
   }
   const requiredFields = ['email', 'name', 'message']
@@ -51,7 +52,7 @@ exports.handler = async (event, context) => {
     from: "max`s portfolio <maxliu@example.com>",
     to: `${body.name} <${body.email}>, contact@example.com`,
     subject: "Contact me",
-    html: generateContactEmail({name: body.name, email: body.email})
+    html: generateContactEmail({name: body.name, email: body.email, message: body.message})
   })
   return {
     statusCode: 200,
