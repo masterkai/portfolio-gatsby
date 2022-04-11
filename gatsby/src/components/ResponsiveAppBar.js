@@ -107,12 +107,15 @@ const ResponsiveAppBar = React.forwardRef(({mode}, ref) => {
             </Menu>
           </Box>
           <Box sx={{flexGrow: 1, display: {xs: 'flex', md: 'none'}}}>
-            <Link
-              sx={{display: 'flex', alignItems: 'center'}}
-              to="/"
-            >
-              <icons.Logo
-                sx={{display: 'flex', fontSize: 40, color: isDark() ? 'primary' : 'yellow'}}/>
+            <Link to="/">
+              <Typography
+                variant="h6"
+                noWrap
+                component="div"
+                sx={{display: {xs: 'flex', md: 'none'}}}
+              >
+                <icons.Logo sx={{fontSize: 40, color: isDark() ? 'primary' : 'yellow'}}/>
+              </Typography>
             </Link>
           </Box>
 
