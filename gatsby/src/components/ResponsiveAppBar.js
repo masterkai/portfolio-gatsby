@@ -114,9 +114,11 @@ const ResponsiveAppBar = React.forwardRef(({mode}, ref) => {
             sx={{flexGrow: 1, display: {xs: 'flex', md: 'none'}}}
           >
             <Link
+              sx={{display: 'flex', alignItems: 'center'}}
               to="/"
             >
-              <icons.Logo sx={{display: 'flex', fontSize: 40, color: isDark() ? 'primary' : 'yellow'}}/>
+              <icons.Logo
+                sx={{display: 'flex', alignContent: 'center', fontSize: 40, color: isDark() ? 'primary' : 'yellow'}}/>
             </Link>
           </Typography>
 
