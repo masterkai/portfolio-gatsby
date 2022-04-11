@@ -106,21 +106,16 @@ const ResponsiveAppBar = React.forwardRef(({mode}, ref) => {
               ))}
             </Menu>
           </Box>
-
-          <Typography
-            variant="h6"
-            noWrap
-            component="div"
-            sx={{flexGrow: 1, display: {xs: 'flex', md: 'none'}}}
-          >
+          <Box sx={{flexGrow: 1, display: {xs: 'flex', md: 'none'}}}>
             <Link
               sx={{display: 'flex', alignItems: 'center'}}
               to="/"
             >
               <icons.Logo
-                sx={{display: 'flex', alignContent: 'center', fontSize: 40, color: isDark() ? 'primary' : 'yellow'}}/>
+                sx={{display: 'flex', fontSize: 40, color: isDark() ? 'primary' : 'yellow'}}/>
             </Link>
-          </Typography>
+          </Box>
+
 
           <Box sx={{flexGrow: 1, display: {xs: 'none', md: 'flex'}}}>
             {pages.map((page) => (
