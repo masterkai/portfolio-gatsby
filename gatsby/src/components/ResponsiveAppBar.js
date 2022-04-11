@@ -59,8 +59,14 @@ const ResponsiveAppBar = React.forwardRef(({mode}, ref) => {
                 component="div"
                 sx={{mr: 2, display: {xs: 'none', md: 'flex'}}}
               >
-                <icons.Logo sx={{fontSize: 40, color: isDark()?'primary':'yellow'}}/>
-                <Typography sx={{fontSize: 24, color: isDark()?'primary':'yellow', fontWeight: 'bold', ml: 1}}>KAIMINGLIU</Typography>
+                <icons.Logo sx={{fontSize: 40, color: isDark() ? 'primary' : 'yellow'}}/>
+                <Typography sx={{
+                  fontSize: 24,
+                  lineHeight: '40px',
+                  color: isDark() ? 'primary' : 'yellow',
+                  fontWeight: 'bold',
+                  ml: 1
+                }}>KAIMINGLIU</Typography>
               </Typography>
             </Link>
           </Box>
@@ -107,8 +113,10 @@ const ResponsiveAppBar = React.forwardRef(({mode}, ref) => {
             component="div"
             sx={{flexGrow: 1, display: {xs: 'flex', md: 'none'}}}
           >
-            <Link sx={{display: 'flex', alignItems: 'center'}} to="/">
-              <icons.Logo sx={{fontSize: 40, color: isDark()?'primary':'yellow'}}/>
+            <Link
+              to="/"
+            >
+              <icons.Logo sx={{display: 'flex', fontSize: 40, color: isDark() ? 'primary' : 'yellow'}}/>
             </Link>
           </Typography>
 
